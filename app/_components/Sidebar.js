@@ -101,7 +101,7 @@ const Sidebar = () => {
                 !openError? <IoIosArrowDown  onClick={()=>setOpenError(!openError)} />:<IoIosArrowForward  onClick={()=>setOpenError(!openError)} />
               }
             </div>
-            {!openError ? (
+            {openError ? (
               <ul>
               <li>
               <div className='flex gap-2 items-center text-md py-3 px-1 ml-5 text-[18px]'>
