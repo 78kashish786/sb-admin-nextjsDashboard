@@ -28,7 +28,7 @@ const Sidebar = () => {
                 <h3>Layout</h3>
               </div>
               {
-                !openAuth? <IoIosArrowDown  onClick={()=>setOpenLayout(!openLayout)} />:<IoIosArrowForward  onClick={()=>setOpenLayout(!openLayout)} />
+                openAuth? <IoIosArrowDown  onClick={()=>setOpenLayout(!openLayout)} />:<IoIosArrowForward  onClick={()=>setOpenLayout(!openLayout)} />
               }
             </div>
             {
@@ -53,7 +53,7 @@ const Sidebar = () => {
                 <h3>Pages</h3>
               </div>
               {
-                !openPages ? <IoIosArrowDown/>:<IoIosArrowForward />
+                openPages ? <IoIosArrowDown/>:<IoIosArrowForward />
               }
             </div>
 
@@ -66,12 +66,12 @@ const Sidebar = () => {
                 <h3>Authentication</h3>
               </div>
               {
-                !openAuth? <IoIosArrowDown  onClick={()=>setOpenAuth(!openAuth)} />:<IoIosArrowForward  onClick={()=>setOpenAuth(!openAuth)} />
+                openAuth? <IoIosArrowDown  onClick={()=>setOpenAuth(!openAuth)} />:<IoIosArrowForward  onClick={()=>setOpenAuth(!openAuth)} />
               }
             </div>
             {
               !openAuth ? " ":(
-                <ul>
+                <ul className=''>
                   <li>
                   <div className='flex gap-2 items-center text-md py-3 px-1 ml-5 text-[18px]'>
                 <h3>Login</h3>
@@ -98,7 +98,7 @@ const Sidebar = () => {
                 <h3>Error</h3>
               </div>
               {
-                !openError? <IoIosArrowDown  onClick={()=>setOpenError(!openError)} />:<IoIosArrowForward  onClick={()=>setOpenError(!openError)} />
+                openError? <IoIosArrowDown  onClick={()=>setOpenError(!openError)} />:<IoIosArrowForward  onClick={()=>setOpenError(!openError)} />
               }
             </div>
             {openError ? (
@@ -147,7 +147,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-      <div className='bg-gray-500 bg-opacity-70 w-[100%] p-4'>
+      <div className='bg-gray-500 bg-opacity-70 w-[100%] p-4 '>
         <h1 className='text-sm text-gray-400'>Logged in As:</h1>
         <h3 className='text-xl font-gray-300'>Start Bootstrap</h3>
       </div>
