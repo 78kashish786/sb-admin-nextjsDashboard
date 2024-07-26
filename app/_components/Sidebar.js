@@ -78,13 +78,13 @@ const Sidebar = ({handleStaticNav,}) => {
               </Link>
                   </li>
                   <li>
-                  <div className='flex gap-2 items-center text-md py-3 px-1 ml-5 text-[18px]'>
-                <h3>Register</h3>
-              </div>
+                  <Link href='/forget-password'className='flex gap-2 items-center text-md py-3 px-1 ml-5 text-[18px]'>
+                <h3>Forget Password</h3>
+              </Link>
                   </li>
                   <li>
                   <div className='flex gap-2 items-center text-md py-3 px-1 ml-5 text-[18px]'>
-                <h3>Forget Password</h3>
+                <h3>Register</h3>
               </div>
                   </li>
                 </ul>
