@@ -24,7 +24,7 @@ const LayComp = ({ children }) => {
             onhide ? 'hidden' : 'self-start sticky top-0 bottom-0 col-span-1'
           }
         >
-          <Sidebar handleStaticNav={handleStaticNav} />
+          <Sidebar handleStaticNav={handleStaticNav} staticNav={staticNav} />
         </aside>
         <div className={onhide ? 'col-span-6' : 'col-span-5'}>
           <Main>{children}</Main>
