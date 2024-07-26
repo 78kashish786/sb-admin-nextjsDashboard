@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { FaEarthAfrica } from 'react-icons/fa6'
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io'
-const Sidebar = () => {
+const Sidebar = ({handleStaticNav}) => {
   const [openPages,setOpenPages]= useState(false);
   const [openAuth,setOpenAuth]= useState(false);
   const [openError,setOpenError]= useState(false);
@@ -34,9 +34,9 @@ const Sidebar = () => {
             {
               !openLayout ? " ":(
                 <ul>
-                  <li>
+                  <li onClick={handleStaticNav}>
                   <div className='flex gap-2 items-center text-md py-3 px-1 ml-5 text-[18px]'>
-                <h3>Static Navigation</h3>
+                <h3 >Static Navigation</h3>
               </div>
                   </li>
                   <li onClick={()=>setLightMode(!lightMode)}>

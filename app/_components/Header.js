@@ -5,7 +5,7 @@ import { FaSearch } from 'react-icons/fa'
 import { FaUserAlt } from 'react-icons/fa'
 import { FaChevronDown } from 'react-icons/fa'
 
-const Header = ({handleOnHide}) => {
+const Header = ({handleOnHide,staticNav}) => {
   const [openSubMenu, setOpenSubMenu] = useState(false);
   const SubMenu = [
     { name: 'Setting' },
@@ -14,7 +14,7 @@ const Header = ({handleOnHide}) => {
   ]
 
   return (
-    <div className=' sticky top-0  px-6  bg-gray-800 text-white flex justify-between items-center z-50 '>
+    <div className={` ${staticNav  ? " ":"sticky"} top-0  px-6  bg-gray-800 text-white flex justify-between items-center z-50 `}>
       <div className='flex gap-[100px] text-xl items-center'>
         <h1>Start BootStrap</h1>
         <MdOutlineMenu onClick={()=>handleOnHide()} size={25} />

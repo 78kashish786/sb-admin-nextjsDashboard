@@ -1,11 +1,12 @@
 import CustomLayout from '@/app/_components/CustomLayout'
 import React from 'react'
+import LoginRootLayout from './layout'
 
 const page = () => {
   return (
-    <CustomLayout>
-      Login
-    </CustomLayout>
+    <LoginRootLayout>
+      {/* <h1>Login</h1> */}
+    </LoginRootLayout>
   )
 }
 
